@@ -30,3 +30,10 @@ npx wrangler deploy       # needs CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID
 ```
 
 Nothing here is a quote, and nothing here is legal, tax or investment advice.
+
+## Fonts
+
+Font binaries are not committed. Run `./scripts/fetch-fonts.sh` (needs `curl` + `sha256sum`) to download the exact pinned woff2 files from fonts.gstatic.com (Google Fonts' official CDN) into `public/fonts/`; every file is verified against a recorded SHA-256 and the script fails on any mismatch.
+
+- Inter Tight (variable) and Instrument Serif (regular + italic) are open-licensed substitutes for Odin's commercial brand fonts (Die Grotesk A, MD Thermochrome), which are not redistributable.
+- Both are SIL Open Font License 1.1. License texts: `licenses/OFL-inter-tight.txt`, `licenses/OFL-instrument-serif.txt`; the notices must accompany any redistribution.
