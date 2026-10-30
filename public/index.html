@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fees &amp; Close - what Odin publishes about deal costs</title>
+<meta name="description" content="An independent concept by Ayo Ahmed: every fee Odin publishes for syndicate leads, with sources, plus the questions to ask before you close. Not affiliated with Odin.">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-eye" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/></svg></span>
+    <span><span class="brand-name">Fees &amp; Close</span><br><span class="brand-sub">the syndicate deal cost briefing</span></span>
+  </div>
+  <span class="indie-badge">Independent concept by Ayo Ahmed - not affiliated with Odin</span>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">For syndicate leads and new fund managers</p>
+    <h1>What Odin publishes about deal costs, and what to ask before you close<span class="dot-end">.</span></h1>
+    <p>Every figure below is taken from Odin's public website or help centre, in the currency Odin published it, with the source linked. Where a number was not found in the sources checked, this page says so and tells you what to ask instead.</p>
+  </section>
+
+  <div class="layout">
+    <aside class="panel">
+      <h2>Your deal</h2>
+      <p class="hint">Your inputs only, applied to the published starting rates on the right. Nothing is sent or stored - the maths runs in your browser and stays there.</p>
+      <div class="field-row">
+        <div class="field">
+          <label for="raise">Raise size</label>
+          <input type="number" id="raise" min="0" step="1000" value="250000" inputmode="numeric">
+        </div>
+        <div class="field">
+          <label for="currency">Currency</label>
+          <select id="currency">
+            <option value="GBP" selected>GBP</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="lps">Investors (LPs)</label>
+        <input type="number" id="lps" min="1" step="1" value="12" inputmode="numeric">
+        <p class="sub">Odin publishes a minimum investor ticket of $1,000 on its SPV product.</p>
+      </div>
+      <p class="note-strip">This page does not compare, rank or recommend a route. Percentage tiers are applied to your raise as illustrative arithmetic; flat prices are quoted only in the currency Odin published, with no conversion.</p>
+    </aside>
+
+    <section class="results">
+      <div class="dark-card">
+        <p class="eyebrow">Published starting points - checked 30 Oct 2026</p>
+        <h2>Four published prices. No verdicts.</h2>
+        <div class="cost-grid">
+          <div class="cost-cell">
+            <div class="label">Odin SPV (one-off)</div>
+            <div class="amount">From $6,000</div>
+            <div class="meta">USD, as published. Minimum investor ticket $1,000. Additional fees may apply for certain services.</div>
+          </div>
+          <div class="cost-cell">
+            <div class="label">Odin SPV (always-on)</div>
+            <div class="amount">From $12,000/yr</div>
+            <div class="meta">USD, as published. Everything in one-off, plus one rolling close per quarter.</div>
+          </div>
+          <div class="cost-cell">
+            <div class="label">Odin Syndicate</div>
+            <div class="amount">4% deal fee</div>
+            <div class="meta">Entry tier. No setup fees, no recurring fees (Odin Glossary of Terms).</div>
+          </div>
+          <div class="cost-cell">
+            <div class="label">Odin Syndicate Plus</div>
+            <div class="amount">3.5% + &pound;3,000</div>
+            <div class="meta">Deal fee plus a one-off &pound;3,000 setup (GBP, as published) covering a branded nominee entity.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callouts">
+        <div class="callout">
+          <h3>Floors and caps exist - the amounts were not found in public sources</h3>
+          <p>Odin's help centre states: "Deal fees are capped at both ends, with a floor price and a ceiling price." The actual floor and ceiling amounts were not found in Odin's public website or help centre as of 30 Oct 2026, so no exact total can be worked out from the figures found there.</p>
+        </div>
+        <div class="callout">
+          <h3>Follow-on deals have a reduced minimum fee</h3>
+          <p>Odin's glossary says it "offers reduced minimum deal fees for follow-on deals", and the reduced amount was not found in public sources as of 30 Oct 2026. It only binds when the minimum applies, so ask on deal two onwards.</p>
+        </div>
+        <div class="callout">
+          <h3>One party pays the fee - you choose which</h3>
+          <p>Odin's fee can be paid by the syndicate lead, the investee company, or investors pro-rata (a &pound;50k investor pays more of it than a &pound;5k one). It cannot be split between parties. Carry is entered as a fixed percentage in deal setup - Odin says no in-product mechanism exists for hurdles or other performance terms.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Your numbers</h2>
+        <p class="hint">Your raise, multiplied by the published percentage tiers. Illustrative arithmetic only - Odin's actual fee will reflect its floors and caps, whose amounts were not found in public sources, so treat these as the shape of the cost, not the quote.</p>
+        <dl class="kv">
+          <dt>Syndicate tier, 4%</dt><dd id="out-syndicate">-</dd>
+          <dt>Syndicate Plus tier, 3.5%</dt><dd id="out-plus">-</dd>
+          <dt>Plus setup fee</dt><dd id="out-setup">-</dd>
+          <dt>Per LP, on average</dt><dd id="out-perlp">-</dd>
+        </dl>
+        <p class="note-strip" id="out-note"></p>
+      </div>
+
+      <div class="card">
+        <h2>Five things to ask Odin before you close</h2>
+        <p class="hint">The published numbers get you to a shortlist of questions, not to a total. These are the gaps this page could not fill from public sources.</p>
+        <ol class="steps">
+          <li><span class="n">1</span>Which pricing tier applies to my deal - and what are its fee floor and cap? (Odin says floors and caps exist; the amounts were not found in public sources, and existing customers may be on legacy terms.)</li>
+          <li><span class="n">2</span>What is the reduced minimum fee for a follow-on deal?</li>
+          <li><span class="n">3</span>Who should pay the fee on this deal - me, the company, or my investors pro-rata - and what does each choice do to my carry maths?</li>
+          <li><span class="n">4</span>What does a rolling close cost on my tier - the always-on SPV from $12,000/year, or an edge-case extra fee?</li>
+          <li><span class="n">5</span>Which services trigger the "additional fees may apply" line on the SPV price card?</li>
+        </ol>
+      </div>
+
+      <div class="disclaimer">
+        Independent concept by Ayo Ahmed, built as a working artifact for Odin's Founding Growth Associate process. Not affiliated with or endorsed by Odin. All Odin figures come from Odin's public website and help centre as checked on 30 Oct 2026 and may have changed since. Where a figure was not found in the sources checked, this page says so rather than estimating it. Nothing here is a quote, and nothing here is legal, tax or investment advice.
+      </div>
+
+      <p class="sources">
+        Sources: <a href="https://www.joinodin.com/products/spv">joinodin.com/products/spv</a> (SPV from $6k; always-on from $12k/yr; minimum investor ticket $1,000) &middot; <a href="https://help.joinodin.com/hc/en-gb/articles/29312414835985-Glossary-of-Terms">Odin Glossary of Terms</a> (Syndicate 4%; Syndicate Plus 3.5% + &pound;3,000 setup; reduced minimums for follow-on deals; platform fee minimum and cap definitions) &middot; <a href="https://help.joinodin.com/hc/en-gb/articles/27884030966289-My-Syndicate-Lead-has-asked-me-to-pay-Odin-s-fees-How-does-that-work-and-what-is-Odin-s-pricing">Odin pricing help article</a> ("Deal fees are capped at both ends, with a floor price and a ceiling price.") &middot; <a href="https://help.joinodin.com/hc/en-gb/articles/25424077583377-Closing-a-Primary-deal">Closing a Primary deal</a> (fee paid by lead, company or investors pro-rata; one payer only; fixed-percentage carry; optional cash fee on invite links).
+      </p>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <span>Fees &amp; Close - an independent concept by Ayo Ahmed. Not affiliated with Odin.</span>
+  <span>All maths runs locally in your browser - your inputs never leave it.</span>
+</footer>
+<script src="/calc.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
