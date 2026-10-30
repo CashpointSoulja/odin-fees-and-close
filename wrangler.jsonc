@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "odin-deal-planner",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-12",
+  "workers_dev": true,
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": true },
+  "migrations": [ { "tag": "v1", "new_sqlite_classes": ["PlanMailbox"] }, { "tag": "v2", "deleted_classes": ["PlanMailbox"] } ],
+  "observability": { "enabled": false }
+}
